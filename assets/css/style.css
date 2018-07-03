@@ -1,0 +1,18 @@
+/* css sheet for trivia game */
+
+#startButton {
+    display: block;
+}
+
+h2 {
+    display: none;
+}
+
+p {
+    display: none;
+}
+
+.form-check {
+    display: none;
+}
+
