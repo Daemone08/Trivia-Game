@@ -20,6 +20,11 @@ p {
     display: none;
 }
 
+#submitButton {
+    display: none;
+}
+
 #resetButton {
     display: none;
 }
+
