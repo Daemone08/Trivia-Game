@@ -28,11 +28,12 @@ function resultsCalculator() {
     userAnswer.splice(2,1,userAnswerThree);
 
     var userAnswerFour = $("input[name='fourthQuestionAnswers']:checked").val();
+    console.log(userAnswerFour);
     userAnswer.splice(3,1,userAnswerFour);
 
     // tally up totals
     for (i=0; i < answer.length; i++) {
-        if (userAnswer[i] == "") {
+        if (userAnswer[i] == undefined) {
             unansweredQuestions++;
         }
         else if (userAnswer[i] == answer[i]) {
@@ -43,8 +44,6 @@ function resultsCalculator() {
         } 
     }
 }
-
-
 
 $(document).ready(function () {
     // startButton jquery function to display questions 
@@ -93,7 +92,12 @@ function gameOver() {
             $("#results").hide();
             $("#resetButton").hide();
             // uncheck radio buttons
-            $("input[type=radio]").prop("checked", false) ;
+            $("input[type=radio]").prop("checked", false);
+            // reset answers
+            userAnswer = ["", "", "", ""];
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            unansweredQuestions = 0;
         });
     });
 }
