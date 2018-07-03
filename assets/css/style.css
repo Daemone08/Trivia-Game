@@ -16,3 +16,10 @@ p {
     display: none;
 }
 
+#results {
+    display: none;
+}
+
+#resetButton {
+    display: none;
+}
